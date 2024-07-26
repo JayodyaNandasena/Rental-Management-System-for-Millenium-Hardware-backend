@@ -83,3 +83,13 @@ Q.idea/sonarlint/securityhotspotstore/c/c/cc88d5e3e445f798f81349c0b51cd446c65700
 Q.idea/sonarlint/securityhotspotstore/c/4/c42545ff3b5c61ec18e0911ca3eaecc7ba6d429d,c\1\c1310511d8803592984ec2d4106da24a315a45f8
 w
 G.idea/sonarlint/issuestore/d/5/d5c72349594e35b767ad592ecf150c817c8f672d,4\9\49bb027595e7a163b6dad19b2552caa4665ffba7
+j
+:src/main/java/edu/icet/crm/controller/RentaController.java,6\b\6b5d5a5257524791874c600ad70b9683b686ebc4
+m
+=src/main/java/edu/icet/crm/controller/CustomerController.java,4\c\4ce859c42fa946492ab2a4b2c15a1b60cda4d898
+^
+.src/main/java/edu/icet/crm/model/Customer.java,4\8\48f5bb7297bd6c2116ce1224e39d18e9cc646d29
+g
+7src/main/java/edu/icet/crm/service/CustomerService.java,3\1\316ecaf414761eb3689b8675ca406d9bc3a15b0c
+p
+@src/main/java/edu/icet/crm/service/impl/CustomerServiceImpl.java,1\d\1d751a3e6738eee2fe525a687c97c2d97e5afd63
