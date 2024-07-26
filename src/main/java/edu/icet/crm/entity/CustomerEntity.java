@@ -1,5 +1,6 @@
 package edu.icet.crm.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -19,6 +20,7 @@ public class CustomerEntity {
     @Column(nullable = false)
     private String contactNumber;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<RentalEntity> rentalList;
 

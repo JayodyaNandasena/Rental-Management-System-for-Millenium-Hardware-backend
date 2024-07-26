@@ -100,4 +100,14 @@ public class ItemServiceImpl implements ItemService {
 
         return allItemNames;
     }
+
+    @Override
+    public List<Long> getAllIds() {
+        List<Long> allItemNames = itemRepository.findAllIds();
+
+        if (allItemNames.isEmpty())
+            throw new RecordNotFoundException("No Item Records");
+
+        return allItemNames;
+    }
 }

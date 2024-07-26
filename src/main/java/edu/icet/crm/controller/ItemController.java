@@ -27,8 +27,18 @@ public class ItemController {
     }
 
     @GetMapping("/all-names")
-    public SuccessResponse getAllMobiles(){
+    public SuccessResponse getAllNames(){
         List<String> items = itemService.getAllNames();
+
+        return SuccessResponse.builder()
+                .status("Success")
+                .result(items)
+                .build();
+    }
+
+    @GetMapping("/all-ids")
+    public SuccessResponse getAllIds(){
+        List<Long> items = itemService.getAllIds();
 
         return SuccessResponse.builder()
                 .status("Success")

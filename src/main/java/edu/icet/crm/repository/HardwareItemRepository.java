@@ -10,4 +10,7 @@ import java.util.List;
 public interface HardwareItemRepository extends CrudRepository<HardwareItemEntity,Long> {
     @Query("SELECT h.name FROM HardwareItemEntity h")
     List<String> findAllNames();
+
+    @Query("SELECT h.itemId FROM HardwareItemEntity h")
+    List<Long> findAllIds();
 }

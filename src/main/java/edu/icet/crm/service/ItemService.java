@@ -12,4 +12,6 @@ public interface ItemService {
     Item searchById(Long id);
 
     List<String> getAllNames();
+
+    List<Long> getAllIds();
 }
