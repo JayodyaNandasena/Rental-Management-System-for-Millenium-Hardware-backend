@@ -1,0 +1,8 @@
+spring:
+  datasource  :
+    username  : root
+    password  : 1234
+    url : jdbc:mysql://localhost:3306/rental_dev_db?createDatabaseIfNotExist=true
+  hibernate :
+    ddl-auto  : update
+    show-sql  : true
