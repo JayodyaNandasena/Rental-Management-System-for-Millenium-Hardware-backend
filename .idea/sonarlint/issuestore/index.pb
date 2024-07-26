@@ -93,3 +93,7 @@ g
 7src/main/java/edu/icet/crm/service/CustomerService.java,3\1\316ecaf414761eb3689b8675ca406d9bc3a15b0c
 p
 @src/main/java/edu/icet/crm/service/impl/CustomerServiceImpl.java,1\d\1d751a3e6738eee2fe525a687c97c2d97e5afd63
+d
+4src/main/java/edu/icet/crm/model/CustomerCreate.java,1\4\14b355b0bdd6157b5ce899c55fe4447555daea07
+k
+;src/main/java/edu/icet/crm/controller/RentalController.java,b\5\b5363385c4db2e3753ef2da67d4dde721dedf96f

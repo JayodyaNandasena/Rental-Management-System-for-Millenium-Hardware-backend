@@ -7,9 +7,12 @@ import edu.icet.crm.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/item")
 @RequiredArgsConstructor
+@CrossOrigin
 public class ItemController {
     private final ItemService itemService;
     @GetMapping("/by-id")
@@ -21,6 +24,16 @@ public class ItemController {
                 .result(item)
                 .build();
 
+    }
+
+    @GetMapping("/all-names")
+    public SuccessResponse getAllMobiles(){
+        List<String> items = itemService.getAllNames();
+
+        return SuccessResponse.builder()
+                .status("Success")
+                .result(items)
+                .build();
     }
 
     @PostMapping

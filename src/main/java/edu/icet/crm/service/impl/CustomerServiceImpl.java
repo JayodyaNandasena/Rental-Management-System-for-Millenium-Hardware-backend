@@ -6,6 +6,7 @@ import edu.icet.crm.entity.HardwareItemEntity;
 import edu.icet.crm.exception.InvalidParameterException;
 import edu.icet.crm.exception.RecordNotFoundException;
 import edu.icet.crm.model.Customer;
+import edu.icet.crm.model.CustomerCreate;
 import edu.icet.crm.model.Item;
 import edu.icet.crm.model.ItemCreate;
 import edu.icet.crm.repository.CustomerRepository;
@@ -27,7 +28,7 @@ public class CustomerServiceImpl implements CustomerService {
     private final ObjectMapper mapper;
 
     @Override
-    public Customer persist(Customer dto) {
+    public Customer persist(CustomerCreate dto) {
         if (! StringUtils.hasText(dto.getName()))
             throw new InvalidParameterException("Invalid Name");
 
@@ -127,7 +128,7 @@ public class CustomerServiceImpl implements CustomerService {
         List<String> allContactNumbers = customerRepository.findAllContactNumbers();
 
         if (allContactNumbers.isEmpty())
-            throw new RecordNotFoundException("No Customers Records");
+            throw new RecordNotFoundException("No Customer Records");
 
         return allContactNumbers;
     }

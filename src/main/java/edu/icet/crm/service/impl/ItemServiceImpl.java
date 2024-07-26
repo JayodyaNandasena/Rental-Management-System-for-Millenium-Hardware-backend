@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -88,5 +89,15 @@ public class ItemServiceImpl implements ItemService {
                 Item.class
         );
 
+    }
+
+    @Override
+    public List<String> getAllNames() {
+        List<String> allItemNames = itemRepository.findAllNames();
+
+        if (allItemNames.isEmpty())
+            throw new RecordNotFoundException("No Item Records");
+
+        return allItemNames;
     }
 }

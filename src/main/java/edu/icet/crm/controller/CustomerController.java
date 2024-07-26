@@ -1,9 +1,6 @@
 package edu.icet.crm.controller;
 
-import edu.icet.crm.model.Customer;
-import edu.icet.crm.model.Item;
-import edu.icet.crm.model.ItemCreate;
-import edu.icet.crm.model.SuccessResponse;
+import edu.icet.crm.model.*;
 import edu.icet.crm.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/customer")
 @RequiredArgsConstructor
+@CrossOrigin
 public class CustomerController {
     private final CustomerService customerService;
     @GetMapping("/by-id")
@@ -48,7 +46,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public SuccessResponse persist(@RequestBody Customer customer){
+    public SuccessResponse persist(@RequestBody CustomerCreate customer){
         Customer savedCustomer = customerService.persist(customer);
 
         return SuccessResponse.builder()
